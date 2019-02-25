@@ -121,17 +121,119 @@ public class Arrays extends PApplet
         {
             rect(0,coordy,rainfall[i],length);
             coordy += length;
-        }
+        }   
 
     }
+
+    // public void lineGrapgh()
+    // { 
+    //     int margin = 40;
+    //     int Amount = 15;
+        // int xAxis = 40;
+        // int Amount = 15;
+        // int gap = height -xAxis;
+        // int length = height -(xAxis * 2);
+        
+    //     for (int i = 0; i < Amount; i++ )
+    //     {
+    //         line(20 , 10 ,20, 410); // x , y, x main kitna move ho ge -->  , y height;
+    //         line(500, 400, 5, 400);
+    //     }
+    // //    line(20 , 10 ,20, 410); // x , y, x main kitna move ho ge -->  , y height;
+    // //    line(500, 400, 5, 400);
+    //     // line(xAxis,xAxis,xAxis,gap );
+        
+    // }
+
+
+    // Kai 's  ka tarreqa ---------------------
+
+    // public void Graph()
+    // {
+    //     int margin = 40; // distance x and y axis se matlb edge se kitna door hona cheheye 
+    //     stroke(255);
+
+    //     line(margin, height - margin, width - margin, height- margin); // x 
+    //     line(margin, margin, margin, width-margin); // y 
+
+    //     int yGap = 0; 
+    //     for(int i =0; i < rainfall.length; i++)
+    //     {
+    //         String month = month[i];
+    //         line()
+    //     }
+    // }
+
+
+
+
+    // lab 4 ---- turorial ----TASK 1 ----
+
+     // how much gap you want on both side 
+    //  void drawLineGraph ()
+    //  {
+    //     float gap = width * 0.1f; 
+    //     stroke(255);
+    //     line(gap, gap, gap, height-gap); // vertivle line 
+    //     line(gap, height-gap, width-gap, height-gap); // horizontal line 
+
+    //     textAlign(CENTER, CENTER);
+    //     for(int i = 0; i < months.length; i++)// label on the  axis
+    //     {
+    //         float x = map(i, 0, months.length -1 , gap, width - gap); // map from 0 - 11
+    //         line(x, height- gap, x, height- gap + 5);
+
+    //         //label on x axis
+    //         fill(255);
+    //         float ty = height - (gap /2);
+    //         text(months[i], x, ty);
+
+    //     }
+
+    //     //y value 
+    //     for(int i = 0; i <= 150; i += 10)
+    //     {
+    //         float y = map(i, 0, 150, height -gap , gap);
+    //         line(gap - 5, y, gap, y);
+    //         text(i, gap /2, y);
+    //     }
+    //     for (int i = 1; i < rainfall.length; i++)
+    //     {
+    //         float x1 = map (i-1, 0, rainfall.length -1, gap, width - gap);
+    //         float y1 = map (rainfall[i - 1], 0, 150, height - gap, gap);
+    //         float x2 = map (i, 0, rainfall.length -1, gap, width - gap);
+    //         float y2 = map (rainfall[i], 0, 150, height - gap, gap);
+    //         line(x1, y1, x2, y2);
+
+    //     }
+    //  }
+
+    //-------TASK 2 -------
+
+
+    void drawPieChart()
+    {
+        float cx = width / 2; 
+        float cy = height / 2; 
+
+        float w = width * 0.8f; 
+        arc(cx, cy, w, w, 0, TWO_PI, ARC);
+    }
+  
+
     public void draw()
         {
+            background(0);
 
         /*
         int m = mouseY / rainfall.length;
         fill(0);
         text(rainfall[m], 400,300);*/
-        barchart();
+        // barchart();
+       // lineGrapgh();
+        // Graph();
+        // drawLineGraph();
+        drawPieChart();
     }       
 
 
